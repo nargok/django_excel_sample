@@ -14,6 +14,8 @@ def index(request):
         print(worksheet)
 
         excel_data = list()
+        # データ部から読み込みたいときは、min_row=2を設定する
+        # for row in worksheet.iter_rows(min_row=2):
         for row in worksheet.iter_rows():
             row_data = list()
             for cell in row:
